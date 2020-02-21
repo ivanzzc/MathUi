@@ -27,10 +27,18 @@ public class MathUi extends JPanel {
 
         this.add(scrollPane,new GridBagConstraints(0,0,1,1,0.0,0.0,GridBagConstraints.CENTER,GridBagConstraints.BOTH,new Insets(5,5,5,5),0,0));
         this.add(mathBtn,new GridBagConstraints(0,1,1,1,0.0,0.0,GridBagConstraints.CENTER,GridBagConstraints.NONE,new Insets(5,5,5,5),0,0));
+        this.add(resetBtn,new GridBagConstraints(0,1,1,1,0.0,0.0,GridBagConstraints.EAST,GridBagConstraints.NONE,new Insets(5,5,5,5),0,0));
 
         mathBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 appendText();
+            }
+        });
+
+        resetBtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                msgTxt.selectAll();
+                msgTxt.replaceSelection("");
             }
         });
     }

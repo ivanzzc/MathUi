@@ -47,5 +47,9 @@ public class TestMathUi extends TestCase {
         assertEquals("1+1=2",txtOpr.getText());
         txtOpr.append("2");
         assertEquals("1+1=22",txtOpr.getText());
+
+        JButtonOperator resetBtnOpr=new JButtonOperator(frmOpr,"Reset");
+        resetBtnOpr.doClick();
+        assertEquals("",txtOpr.getText());
     }
 }
