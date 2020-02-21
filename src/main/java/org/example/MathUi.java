@@ -9,6 +9,7 @@ public class MathUi extends JPanel {
     private JTextArea msgTxt=new JTextArea(400,320);
     private JButton mathBtn=new JButton("Math");
     private JButton resetBtn=new JButton("Reset");
+    private JButton checkBtn=new JButton("Check");
 
     public MathUi(){
         this.setLayout(new GridBagLayout());
@@ -28,6 +29,7 @@ public class MathUi extends JPanel {
         this.add(scrollPane,new GridBagConstraints(0,0,1,1,0.0,0.0,GridBagConstraints.CENTER,GridBagConstraints.BOTH,new Insets(5,5,5,5),0,0));
         this.add(mathBtn,new GridBagConstraints(0,1,1,1,0.0,0.0,GridBagConstraints.CENTER,GridBagConstraints.NONE,new Insets(5,5,5,5),0,0));
         this.add(resetBtn,new GridBagConstraints(0,1,1,1,0.0,0.0,GridBagConstraints.EAST,GridBagConstraints.NONE,new Insets(5,5,5,5),0,0));
+        this.add(checkBtn,new GridBagConstraints(0,1,1,1,0.0,0.0,GridBagConstraints.WEST,GridBagConstraints.NONE,new Insets(5,5,5,5),0,0));
 
         mathBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -39,6 +41,12 @@ public class MathUi extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 msgTxt.selectAll();
                 msgTxt.replaceSelection("");
+            }
+        });
+
+        checkBtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                msgTxt.append("      Good!");
             }
         });
     }

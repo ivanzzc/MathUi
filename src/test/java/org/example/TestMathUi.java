@@ -51,5 +51,10 @@ public class TestMathUi extends TestCase {
         JButtonOperator resetBtnOpr=new JButtonOperator(frmOpr,"Reset");
         resetBtnOpr.doClick();
         assertEquals("",txtOpr.getText());
+
+        JButtonOperator checkBtnOpr=new JButtonOperator(frmOpr,"Check");
+        btnOpr.doClick();
+        checkBtnOpr.doClick();
+        assertEquals("1+1=2      Good!",txtOpr.getText());
     }
 }
