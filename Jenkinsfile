@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage('Release Build'){
             steps{
-                sh "mvn clean deploy"
+                sh "mvn clean install"
             }
         }
         stage('Release'){
