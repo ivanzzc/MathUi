@@ -14,7 +14,7 @@ pipeline{
         }
         stage('Release'){
             steps{
-                sh "mv /Users/zhengzhichao/.m2/repository/org/example/MathUi/1.0-SNAPSHOT/MathUi-1.0-SNAPSHOT.jar ~/Download/MathUi.jar"
+                sh "mv /Users/zhengzhichao/.m2/repository/org/example/MathUi/1.0-SNAPSHOT/MathUi-1.0-SNAPSHOT.jar ~/Downloads/MathUi.jar"
             }
         }
     }
