@@ -7,9 +7,14 @@ pipeline{
         maven 'mvn-3.3.9'
     }
     stages{
-        stage('Checking Build'){
+        stage('Release Build'){
             steps{
-                sh "mvn clean verify"
+                sh "mvn clean deploy"
+            }
+        }
+        stage('Release'){
+            steps{
+                sh "mv /Users/zhengzhichao/.m2/repository/org/example/MathUi/1.0-SNAPSHOT/MathUi-1.0-SNAPSHOT.jar ~/Download/MathUi.jar"
             }
         }
     }
